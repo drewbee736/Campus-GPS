@@ -8,8 +8,8 @@ class CampusMap
 			_start, _end, _distance = line.split("\t")
 			@graph.add_edge(_start.to_i, _end.to_i, _distance.to_i)
 		end
-		@graph.rename_node(58, "volen")
-		@graph.rename_node(15, "ziv 127")
+		@graph.rename_node(1000, "volen")
+		@graph.rename_node(1001, "ziv 127")
 	end
 
 	def getInput(string)
