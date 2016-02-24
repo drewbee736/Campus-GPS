@@ -8,12 +8,14 @@ class CampusMap
 			_start, _end, _distance = line.split("\t")
 			@graph.add_edge(_start.to_i, _end.to_i, _distance.to_i)
 		end
+		@graph.rename_node(58, "volen")
+		@graph.rename_node(15, "ziv 127")
 	end
 
 	def getInput(string)
 		print "Pick a #{string} location: "
 
-		return gets.chomp.to_i
+		return @graph.get_node_id(gets.chomp)
 	end
 
 	def solve(start_id, end_id)
@@ -21,7 +23,7 @@ class CampusMap
 		return false if paths == false
 		total_distance = 0
 		paths.each do |p_id, s_id, distance|
-			printf "From %d to %d, distance %d\n", p_id, s_id, distance
+			print "From #{@graph.get_node_name(p_id)} to #{@graph.get_node_name(s_id)}, distance #{distance}\n"
 			total_distance += distance
 		end
 		printf "Total distance: %d\n", total_distance
@@ -33,10 +35,26 @@ class DirectedGraph
 
 	def initialize
 		@nodes = {}
+		@name_to_id = {}
+		@name_to_id["volen"] = 58
+		@name_to_id["ziv 127"] = 15
 	end
 
 	def add_node(node)
 		@nodes[node.id] = node
+	end
+
+	def get_node_name(id)
+		return @nodes[id].name if @nodes[id].name != "Default"
+		return id if @nodes[id].name == "Default"
+	end
+
+	def get_node_id(name)
+		@name_to_id[name]
+	end
+
+	def rename_node(node_id, name)
+		@nodes[node_id].rename(name)
 	end
 
 	def add_edge(predecessor_id, successor_id, weight)
@@ -88,6 +106,10 @@ class Node
 		@id = id
 		@name = name
 		@successors = []
+	end
+
+	def rename(name)
+		@name = name
 	end
 
 	def add_edge(successor, weight)
