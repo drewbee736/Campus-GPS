@@ -8,8 +8,9 @@ class CampusMap
 			_start, _end, _distance = line.split("\t")
 			@graph.add_edge(_start.to_i, _end.to_i, _distance.to_i)
 		end
-		@graph.rename_node(58, "volen")
-		@graph.rename_node(15, "ziv 127")
+		@graph.rename_node(1001, "volen")
+		@graph.rename_node(1002, "ziv 127")
+		@graph.rename_node(1000, "gzang")
 	end
 
 	def getInput(string)
@@ -23,8 +24,14 @@ class CampusMap
 		return false if paths == false
 		total_distance = 0
 		paths.each do |p_id, s_id, distance|
-			print "From #{@graph.get_node_name(p_id)} to #{@graph.get_node_name(s_id)}, distance #{distance}\n"
-			total_distance += distance
+			if p_id == start_id
+				print "Leave #{@graph.get_node_name(p_id)}\n"
+			elsif s_id == end_id
+				print "Enter #{@graph.get_node_name(s_id)}\n"
+			else
+				print "From #{@graph.get_node_name(p_id)} to #{@graph.get_node_name(s_id)}, distance #{distance}\n"
+				total_distance += distance
+			end
 		end
 		printf "Total distance: %d\n", total_distance
 	end
@@ -36,8 +43,9 @@ class DirectedGraph
 	def initialize
 		@nodes = {}
 		@name_to_id = {}
-		@name_to_id["volen"] = 58
-		@name_to_id["ziv 127"] = 15
+		@name_to_id["volen"] = 1001
+		@name_to_id["ziv 127"] = 1002
+		@name_to_id["gzang"] = 1000
 	end
 
 	def add_node(node)
