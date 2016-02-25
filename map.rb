@@ -2,15 +2,24 @@ require './heap'
 
 class CampusMap
 
-	def load(filename)
+	def load(filename1, filename2)
 		@graph = DirectedGraph.new
-		File.foreach(filename) do |line|
+		count = 1001
+		File.foreach(filename1) do |line|
+			name = line.strip()
+			@graph.add_node(Node.new(count, name))
+			@graph.add_mapping(name, count)
+			count += 1
+		end
+		File.foreach(filename2) do |line|
 			_start, _end, _distance = line.split("\t")
 			@graph.add_edge(_start.to_i, _end.to_i, _distance.to_i)
 		end
-		@graph.rename_node(1001, "volen")
-		@graph.rename_node(1002, "ziv 127")
-		@graph.rename_node(1000, "gzang")
+
+		#(1001..1063).each{|i| @graph.rename_node(i, )}
+		#@graph.rename_node(1001, "volen")
+		#@graph.rename_node(1002, "ziv 127")
+		#@graph.rename_node(1000, "gzang")
 	end
 
 	def getInput(string)
@@ -43,9 +52,13 @@ class DirectedGraph
 	def initialize
 		@nodes = {}
 		@name_to_id = {}
-		@name_to_id["volen"] = 1001
-		@name_to_id["ziv 127"] = 1002
-		@name_to_id["gzang"] = 1000
+		#@name_to_id["volen"] = 1001
+		#@name_to_id["ziv 127"] = 1002
+		#@name_to_id["gzang"] = 1000
+	end
+
+	def add_mapping(name, id)
+		@name_to_id[name] = id
 	end
 
 	def add_node(node)
@@ -131,7 +144,7 @@ class Node
 end
 
 map = CampusMap.new()
-map.load("paths.txt")
+map.load("buildings.txt", "paths.txt")
 i = map.getInput("start")
 j = map.getInput("end")
 map.solve(i, j)
