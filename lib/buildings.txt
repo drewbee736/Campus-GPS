@@ -28,7 +28,7 @@ main entrance
 deroy
 renfield
 shapiro
-usen
+usen massell
 cable
 gordon
 reitman
@@ -42,11 +42,9 @@ ridgewood b
 ridgewood c
 rose art museum
 rosenstiel
-rosie east
-rosie north
-rosie south
+rosie quad
 schwartz
-schwartz castle
+castle
 scc
 sherman
 shiffman
