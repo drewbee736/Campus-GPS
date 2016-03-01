@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class UniversesControllerTest < ActionController::TestCase
+class IntersectionTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

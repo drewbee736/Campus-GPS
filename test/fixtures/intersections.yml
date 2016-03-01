@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  path_id_start: MyString
+  path_id_end: MyString
+  direction: MyString
+
+two:
+  path_id_start: MyString
+  path_id_end: MyString
+  direction: MyString

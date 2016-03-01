@@ -11,11 +11,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160222192351) do
+ActiveRecord::Schema.define(version: 20160227221049) do
 
-  create_table "universes", force: true do |t|
-    t.text     "name"
-    t.integer  "size"
+  create_table "intersections", force: true do |t|
+    t.string   "path_id_start"
+    t.string   "path_id_end"
+    t.string   "direction"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "locations", force: true do |t|
+    t.string   "location_id"
+    t.string   "name"
+    t.string   "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "paths", force: true do |t|
+    t.string   "path_id"
+    t.string   "location_id_start"
+    t.string   "location_id_end"
+    t.integer  "distance"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pictures", force: true do |t|
+    t.string   "picture_id"
+    t.string   "picture_name"
+    t.string   "picture_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "user_id"
+    t.string   "password"
+    t.string   "user_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

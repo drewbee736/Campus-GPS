@@ -1,10 +1,25 @@
 Rails.application.routes.draw do
+  resources :pictures
+
+  resources :intersections do
+    resources :pictures
+  end
+
+  resources :paths
+
+  resources :locations do
+    resources :pictures
+  end
+
+  resources :users do
+    resources :locations
+  end
+
   get 'welcome/index'
 
   #get 'member/:id' => 'members#show'
 
   root 'welcome#index'
-  resources :universes
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
