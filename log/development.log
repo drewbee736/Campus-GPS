@@ -423,3 +423,473 @@ AbstractController::ActionNotFound (The action 'index' could not be found for Pa
   [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
   [1m[35mPath Load (0.2ms)[0m  SELECT "paths".* FROM "paths"
   [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started GET "/welcome/index?start=ziv+127&end=gzang" for 127.0.0.1 at 2016-02-29 20:28:40 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"ziv 127", "end"=>"gzang"}
+  Rendered welcome/index.html.erb (6.8ms)
+Completed 200 OK in 29ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index?start=%3Coption+value%3D&end=%3Coption+value%3D" for 127.0.0.1 at 2016-02-29 20:28:43 -0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"<option value=", "end"=>"<option value="}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  lib/map.rb:100:in `shortest_path'
+  lib/map.rb:32:in `solve'
+  app/controllers/welcome_controller.rb:19:in `index'
+
+
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (62.9ms)
+
+
+Started GET "/welcome/index?start=brown&end=mandel" for 127.0.0.1 at 2016-02-29 20:28:51 -0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"brown", "end"=>"mandel"}
+  Rendered welcome/index.html.erb (1.7ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index?start=usen+massell&end=mandel" for 127.0.0.1 at 2016-02-29 20:28:58 -0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"usen massell", "end"=>"mandel"}
+  Rendered welcome/index.html.erb (1.6ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-01 12:20:34 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+NoMethodError (undefined method `strip' for #<Enumerator: File:foreach("./lib/buildings.txt")>):
+  lib/map.rb:15:in `load_buildings'
+  app/controllers/welcome_controller.rb:8:in `initialize'
+
+
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.0ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (86.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-01 12:22:40 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (3.9ms)
+Completed 200 OK in 28ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index?start=gzang&end=icc" for 127.0.0.1 at 2016-03-01 12:22:45 -0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"gzang", "end"=>"icc"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `html_safe' for false:FalseClass):
+  app/controllers/welcome_controller.rb:20:in `index'
+
+
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (52.5ms)
+
+
+Started GET "/welcome/index?start=gzang&end=gordon" for 127.0.0.1 at 2016-03-01 12:22:53 -0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"gzang", "end"=>"gordon"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `html_safe' for false:FalseClass):
+  app/controllers/welcome_controller.rb:20:in `index'
+
+
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (60.5ms)
+
+
+Started GET "/welcome/index?start=gzang&end=ziv+128" for 127.0.0.1 at 2016-03-01 12:22:58 -0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"gzang", "end"=>"ziv 128"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `html_safe' for false:FalseClass):
+  app/controllers/welcome_controller.rb:20:in `index'
+
+
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (61.7ms)
+
+
+Started GET "/welcome/index?start=gzang&end=ziv+127" for 127.0.0.1 at 2016-03-01 12:23:02 -0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"gzang", "end"=>"ziv 127"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `html_safe' for false:FalseClass):
+  app/controllers/welcome_controller.rb:20:in `index'
+
+
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (61.2ms)
+
+
+Started GET "/welcome/index?start=gzang&end=ziv+127" for 127.0.0.1 at 2016-03-01 12:24:17 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"gzang", "end"=>"ziv 127"}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `html_safe' for false:FalseClass):
+  app/controllers/welcome_controller.rb:20:in `index'
+
+
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (57.6ms)
+
+
+Started GET "/welcome/index?start=gzang&end=volen" for 127.0.0.1 at 2016-03-01 12:24:21 -0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"gzang", "end"=>"volen"}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `html_safe' for false:FalseClass):
+  app/controllers/welcome_controller.rb:20:in `index'
+
+
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (59.1ms)
+
+
+Started GET "/welcome/index?start=gzang&end=volen" for 127.0.0.1 at 2016-03-01 12:25:15 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"gzang", "end"=>"volen"}
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `html_safe' for false:FalseClass):
+  app/controllers/welcome_controller.rb:20:in `index'
+
+
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (73.0ms)
+
+
+Started GET "/welcome/index?start=gzang&end=volen" for 127.0.0.1 at 2016-03-01 13:36:01 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"gzang", "end"=>"volen"}
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `html_safe' for false:FalseClass):
+  app/controllers/welcome_controller.rb:20:in `index'
+
+
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (61.8ms)
+
+
+Started GET "/welcome/index?start=gzang&end=volen" for 127.0.0.1 at 2016-03-01 13:37:47 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"gzang", "end"=>"volen"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `html_safe' for false:FalseClass):
+  app/controllers/welcome_controller.rb:20:in `index'
+
+
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (62.1ms)
+
+
+Started GET "/welcome/index?start=gzang&end=volen" for 127.0.0.1 at 2016-03-01 13:39:37 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"gzang", "end"=>"volen"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `html_safe' for false:FalseClass):
+  app/controllers/welcome_controller.rb:20:in `index'
+
+
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (76.7ms)
+
+
+Started GET "/welcome/index?start=gzang&end=ziv+127" for 127.0.0.1 at 2016-03-01 13:41:30 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"gzang", "end"=>"ziv 127"}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `html_safe' for false:FalseClass):
+  app/controllers/welcome_controller.rb:20:in `index'
+
+
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (57.7ms)
+
+
+Started GET "/welcome/index?start=library&end=ziv+127" for 127.0.0.1 at 2016-03-01 13:41:46 -0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"library", "end"=>"ziv 127"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `html_safe' for false:FalseClass):
+  app/controllers/welcome_controller.rb:20:in `index'
+
+
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (51.9ms)
+
+
+Started GET "/welcome/index?start=library&end=ziv+127" for 127.0.0.1 at 2016-03-01 13:42:58 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"library", "end"=>"ziv 127"}
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `html_safe' for false:FalseClass):
+  app/controllers/welcome_controller.rb:21:in `index'
+
+
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (63.7ms)
+
+
+Started GET "/welcome/index?start=library&end=ziv+127" for 127.0.0.1 at 2016-03-01 13:43:40 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"library", "end"=>"ziv 127"}
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-01 13:47:14 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (6.5ms)
+Completed 200 OK in 30ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index?start=harlan+chapel&end=golding" for 127.0.0.1 at 2016-03-01 13:47:19 -0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"harlan chapel", "end"=>"golding"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `html_safe' for false:FalseClass):
+  app/controllers/welcome_controller.rb:20:in `index'
+
+
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (54.5ms)
+
+
+Started GET "/welcome/index?start=harlan+chapel&end=golding" for 127.0.0.1 at 2016-03-01 13:48:03 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"harlan chapel", "end"=>"golding"}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `html_safe' for false:FalseClass):
+  app/controllers/welcome_controller.rb:20:in `index'
+
+
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (61.2ms)
+
+
+Started GET "/welcome/index?start=harlan+chapel&end=golding" for 127.0.0.1 at 2016-03-01 13:49:30 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"harlan chapel", "end"=>"golding"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `html_safe' for false:FalseClass):
+  app/controllers/welcome_controller.rb:20:in `index'
+
+
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (50.9ms)
+
+
+Started GET "/welcome/index?start=harlan+chapel&end=golding" for 127.0.0.1 at 2016-03-01 13:50:51 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"harlan chapel", "end"=>"golding"}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `html_safe' for false:FalseClass):
+  app/controllers/welcome_controller.rb:20:in `index'
+
+
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.6ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (71.3ms)
+
+
+Started GET "/welcome/index?start=harlan+chapel&end=golding" for 127.0.0.1 at 2016-03-01 13:52:20 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"harlan chapel", "end"=>"golding"}
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `html_safe' for false:FalseClass):
+  app/controllers/welcome_controller.rb:20:in `index'
+
+
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (73.0ms)
+
+
+Started GET "/welcome/index?start=harlan+chapel&end=golding" for 127.0.0.1 at 2016-03-01 13:53:06 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"harlan chapel", "end"=>"golding"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `html_safe' for false:FalseClass):
+  app/controllers/welcome_controller.rb:20:in `index'
+
+
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (60.6ms)
+
+
+Started GET "/welcome/index?start=harlan+chapel&end=golding" for 127.0.0.1 at 2016-03-01 13:54:56 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"harlan chapel", "end"=>"golding"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `html_safe' for false:FalseClass):
+  app/controllers/welcome_controller.rb:20:in `index'
+
+
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (51.1ms)
+
+
+Started GET "/welcome/index?start=harlan+chapel&end=golding" for 127.0.0.1 at 2016-03-01 13:57:54 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"harlan chapel", "end"=>"golding"}
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `html_safe' for false:FalseClass):
+  app/controllers/welcome_controller.rb:20:in `index'
+
+
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.4ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (71.9ms)
+
+
+Started GET "/welcome/index?start=harlan+chapel&end=golding" for 127.0.0.1 at 2016-03-01 14:01:39 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"harlan chapel", "end"=>"golding"}
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `html_safe' for false:FalseClass):
+  app/controllers/welcome_controller.rb:20:in `index'
+
+
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.0ms)
+  Rendered /Users/metaphoenix/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (69.3ms)
+
+
+Started GET "/welcome/index?start=harlan+chapel&end=golding" for 127.0.0.1 at 2016-03-01 14:03:40 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"harlan chapel", "end"=>"golding"}
+
+
+Started GET "/welcome/index?start=harlan+chapel&end=golding" for 127.0.0.1 at 2016-03-01 14:07:18 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"harlan chapel", "end"=>"golding"}
+
+
+Started GET "/welcome/index?start=harlan+chapel&end=golding" for 127.0.0.1 at 2016-03-01 14:11:35 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"harlan chapel", "end"=>"golding"}
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-01 14:14:43 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (5.5ms)
+Completed 200 OK in 28ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index?start=harlan+chapel&end=gordon" for 127.0.0.1 at 2016-03-01 14:14:53 -0500
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"harlan chapel", "end"=>"gordon"}
+
+
+Started GET "/welcome/index?start=harlan+chapel&end=gordon" for 127.0.0.1 at 2016-03-01 14:15:48 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"harlan chapel", "end"=>"gordon"}
+
+
+Started GET "/welcome/index?start=harlan+chapel&end=gordon" for 127.0.0.1 at 2016-03-01 14:19:59 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"harlan chapel", "end"=>"gordon"}
+  Rendered welcome/index.html.erb (5.0ms)
+Completed 200 OK in 28ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcome/index?start=harlan+chapel&end=gordon" for 127.0.0.1 at 2016-03-01 14:20:44 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"harlan chapel", "end"=>"gordon"}
+  Rendered welcome/index.html.erb (3.2ms)
+Completed 200 OK in 25ms (Views: 8.9ms | ActiveRecord: 0.0ms)
