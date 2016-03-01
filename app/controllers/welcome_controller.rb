@@ -8,7 +8,11 @@ class WelcomeController < ApplicationController
   end
 
   def index
-    @notes = ["volen", "ziv 127", "gzang"]
+    name_list = @map.get_all_nodes_name
+    @notes = {}
+    name_list.each do |name|
+      @notes[name] = name
+    end
     if params[:start] != nil && params[:end] != nil
       startP = @map.get_node_id(params[:start])
       endP = @map.get_node_id(params[:end])

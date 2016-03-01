@@ -4,23 +4,24 @@ class CampusMap
 
 	def load(filename1, filename2)
 		@graph = DirectedGraph.new
+        @node_name = []
 		count = 1001
 		File.foreach(filename1) do |line|
 			name = line.strip()
 			@graph.add_node(Node.new(count, name))
 			@graph.add_mapping(name, count)
+            @node_name.push(name)
 			count += 1
 		end
 		File.foreach(filename2) do |line|
 			_start, _end, _distance = line.split("\t")
 			@graph.add_edge(_start.to_i, _end.to_i, _distance.to_i)
 		end
-
-		#(1001..1063).each{|i| @graph.rename_node(i, )}
-		#@graph.rename_node(1001, "volen")
-		#@graph.rename_node(1002, "ziv 127")
-		#@graph.rename_node(1000, "gzang")
 	end
+
+    def get_all_nodes_name
+        return @node_name
+    end
 
 	def get_node_id(name)
 		return @graph.get_node_id(name)
