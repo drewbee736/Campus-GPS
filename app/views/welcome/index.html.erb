@@ -4,15 +4,11 @@
 	<form name="query" action="/welcome/index">
 	Start Location
 	<select name="start">
-		<option value="<%=@notes[0]%>"><%=@notes[0]%></option>
-		<option value="<%=@notes[1]%>"><%=@notes[1]%></option>
-		<option value="<%=@notes[2]%>"><%=@notes[2]%></option>
+		<option value="<%=options_for_select(@notes)%>"></option>
 	</select><br>
 	Destination
 	<select name="end">
-		<option value="<%=@notes[0]%>"><%=@notes[0]%></option>
-		<option value="<%=@notes[1]%>"><%=@notes[1]%></option>
-		<option value="<%=@notes[2]%>"><%=@notes[2]%></option>
+		<option value="<%=options_for_select(@notes)%>"></option>
 	</select><br>
 	<input type="submit" value="Search">
 </form>

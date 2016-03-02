@@ -4,11 +4,16 @@ class WelcomeController < ApplicationController
 
   def initialize
     @map = CampusMap.new()
-    @map.load("./lib/buildings.txt", "./lib/paths.txt")
+    @map.load_buildings("./lib/buildings.txt")
+    @map.load_paths("./lib/paths.txt")
+    name_list = @map.get_all_nodes_name
+    @notes = {}
+    name_list.each do |name|
+      @notes[name] = name
+    end
   end
 
   def index
-    @notes = ["volen", "ziv 127", "gzang"]
     if params[:start] != nil && params[:end] != nil
       startP = @map.get_node_id(params[:start])
       endP = @map.get_node_id(params[:end])
