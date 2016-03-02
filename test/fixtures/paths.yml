@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  path_id: MyString
+  location_id_start: MyString
+  location_id_end: MyString
+  distance: 1
+
+two:
+  path_id: MyString
+  location_id_start: MyString
+  location_id_end: MyString
+  distance: 1

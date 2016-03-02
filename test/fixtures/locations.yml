@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyText
-  size: 1
+  location_id: MyString
+  name: MyString
+  type: 
 
 two:
-  name: MyText
-  size: 1
+  location_id: MyString
+  name: MyString
+  type: 
