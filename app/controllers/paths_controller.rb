@@ -1,2 +1,0 @@
-class PathsController < ApplicationController
-end
