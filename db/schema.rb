@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160227221049) do
+ActiveRecord::Schema.define(version: 20160301235153) do
 
   create_table "intersections", force: true do |t|
     t.string   "path_id_start"
@@ -47,11 +47,13 @@ ActiveRecord::Schema.define(version: 20160227221049) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "user_id"
-    t.string   "password"
-    t.string   "user_name"
+    t.string   "name"
+    t.string   "email"
+    t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "email_confirmed", default: false
+    t.string   "confirmed_token"
   end
 
 end

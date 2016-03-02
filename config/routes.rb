@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   resources :pictures
 
   resources :intersections do
@@ -13,6 +14,10 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :locations
+    
+    #member do
+    	#get :confirm_email
+    #end
   end
 
   get 'welcome/index'
