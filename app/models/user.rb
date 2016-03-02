@@ -5,6 +5,15 @@ class User < ActiveRecord::Base
 	validates :email, presence: true, uniqueness: true
 	has_secure_password
 	
+	
+	def get_email
+		return :email
+	end
+	
+	def get_password
+		return :password
+	end
+	
 	#def email_activate
 		#self.email_confirmed = true
 		#self.confirm_token = nil
