@@ -6,5 +6,3 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Universe.create(name:"Our Universe", size:100)
-User.create(name:"Jerry Wang", password:"apple")
-User.create(name:"Drew", password:"test")
