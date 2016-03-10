@@ -8,6 +8,7 @@ class WelcomeController < ApplicationController
   end
 
   def index
+    
     @notes = ["volen", "ziv 127", "gzang"]
     if params[:start] != nil && params[:end] != nil
       startP = @map.get_node_id(params[:start])

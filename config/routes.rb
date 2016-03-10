@@ -1,10 +1,21 @@
 Rails.application.routes.draw do
+  resources :users
+  get 'admin/index'
+
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
+  post 'sessions/new' => 'sessions#create'
   get 'welcome/index'
 
   #get 'member/:id' => 'members#show'
 
-  root 'welcome#index'
-  resources :universes
+  root 'sessions#new'
+  #root 'welcome#index'
+  resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

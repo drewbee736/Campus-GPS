@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
-ruby '2.2.4'
-
+ruby '2.3.0'
+gem 'bcrypt-ruby', '3.1.2'
 gem 'pg', group: :production
 gem 'sqlite3', group: :development
 gem 'rails_12factor', group: :production
