@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '2.1.5'
+gem 'clearance'
 
 gem 'bcrypt-ruby', '3.1.2'
 gem 'pg', group: :production

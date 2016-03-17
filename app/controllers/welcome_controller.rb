@@ -1,7 +1,7 @@
 require './lib/map.rb'
 
 class WelcomeController < ApplicationController
-
+  before_action :require_login
   def initialize
     @map = CampusMap.new()
     @map.load_buildings("./lib/buildings.txt")
