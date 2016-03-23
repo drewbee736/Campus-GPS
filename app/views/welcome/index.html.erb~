@@ -1,0 +1,20 @@
+<h2>Welcome to Campus GPS</h2>
+
+<p>
+	<form name="query" action="/welcome/index">
+	Start Location
+	<select>
+		<option value="<%=options_for_select(@notes)%>"></option>
+	</select><br>
+	Destination
+	<select>
+		<option value="<%=options_for_select(@notes)%>"></option>
+	</select><br>
+	<input type="submit" value="Search">
+</form>
+
+<p>
+	<%=@result%>
+</p>
+
+</p>

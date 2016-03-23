@@ -1,8 +1,7 @@
 require './lib/map.rb'
 
 class WelcomeController < ApplicationController
-	before_filter :authorize
-	
+
   def initialize
     @map = CampusMap.new()
     @map.load_buildings("./lib/buildings.txt")
