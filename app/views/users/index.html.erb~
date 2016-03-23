@@ -12,7 +12,9 @@
   </thead>
 
   <tbody>
-    <td> <%= User.current_user.name %></td>
+  	<tr>
+    	<td> <%= User.current_user.name %></td>
+    </tr>
   </tbody>
 </table>
 

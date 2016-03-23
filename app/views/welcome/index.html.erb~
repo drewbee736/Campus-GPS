@@ -3,11 +3,11 @@
 <p>
 	<form name="query" action="/welcome/index">
 	Start Location
-	<select>
+	<select name="start">
 		<option value="<%=options_for_select(@notes)%>"></option>
 	</select><br>
 	Destination
-	<select>
+	<select name="end">
 		<option value="<%=options_for_select(@notes)%>"></option>
 	</select><br>
 	<input type="submit" value="Search">
