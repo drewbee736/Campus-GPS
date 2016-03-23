@@ -6413,3 +6413,708 @@ Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-23 18:49:0
 
 
 Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-03-23 18:49:04 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-23 19:21:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 228ms (Views: 196.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2016-03-23 19:21:09 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-23 19:21:09 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-03-23 19:21:09 -0400
+
+
+Started GET "/assets/universes.css?body=1" for 127.0.0.1 at 2016-03-23 19:21:09 -0400
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2016-03-23 19:21:09 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2016-03-23 19:21:09 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-03-23 19:21:09 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-23 19:21:09 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-23 19:21:09 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-23 19:21:09 -0400
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2016-03-23 19:21:09 -0400
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-03-23 19:21:09 -0400
+
+
+Started GET "/assets/universes.js?body=1" for 127.0.0.1 at 2016-03-23 19:21:09 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-23 19:21:09 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2016-03-23 19:21:09 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-03-23 19:21:09 -0400
+
+
+Started POST "/login" for 127.0.0.1 at 2016-03-23 19:21:20 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Uq0PjsXjXenTNQUAGQAz+vpfYiSRyClSflVk5Q0qYmk=", "name"=>"Joe", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."name" = 'Joe' LIMIT 1
+Redirected to http://0.0.0.0:3000/welcome/index
+Completed 302 Found in 91ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2016-03-23 19:21:20 -0400
+
+ActionController::RoutingError (undefined method `geocoded_by' for WelcomeController:Class):
+  app/controllers/welcome_controller.rb:5:in `<class:WelcomeController>'
+  app/controllers/welcome_controller.rb:3:in `<top (required)>'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (7.7ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (35.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-23 19:22:23 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 180ms (Views: 162.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2016-03-23 19:22:24 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-03-23 19:22:24 -0400
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2016-03-23 19:22:24 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2016-03-23 19:22:24 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-03-23 19:22:24 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-23 19:22:24 -0400
+
+
+Started GET "/assets/universes.css?body=1" for 127.0.0.1 at 2016-03-23 19:22:24 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-23 19:22:24 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-23 19:22:24 -0400
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-03-23 19:22:24 -0400
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2016-03-23 19:22:24 -0400
+
+
+Started GET "/assets/universes.js?body=1" for 127.0.0.1 at 2016-03-23 19:22:24 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-23 19:22:24 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2016-03-23 19:22:24 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-23 19:22:24 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-03-23 19:22:24 -0400
+
+
+Started POST "/login" for 127.0.0.1 at 2016-03-23 19:22:29 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Uq0PjsXjXenTNQUAGQAz+vpfYiSRyClSflVk5Q0qYmk=", "name"=>"Joe", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."name" = 'Joe' LIMIT 1
+Redirected to http://0.0.0.0:3000/welcome/index
+Completed 302 Found in 101ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2016-03-23 19:22:29 -0400
+
+ActionController::RoutingError (undefined method `geocoded_by' for WelcomeController:Class):
+  app/controllers/welcome_controller.rb:5:in `<class:WelcomeController>'
+  app/controllers/welcome_controller.rb:3:in `<top (required)>'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (3.9ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (8.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (52.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-23 19:28:33 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 229ms (Views: 197.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2016-03-23 19:28:33 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-23 19:28:33 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-03-23 19:28:33 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-03-23 19:28:33 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2016-03-23 19:28:33 -0400
+
+
+Started GET "/assets/universes.css?body=1" for 127.0.0.1 at 2016-03-23 19:28:34 -0400
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2016-03-23 19:28:34 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-23 19:28:34 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-23 19:28:34 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-23 19:28:34 -0400
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2016-03-23 19:28:34 -0400
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-03-23 19:28:34 -0400
+
+
+Started GET "/assets/universes.js?body=1" for 127.0.0.1 at 2016-03-23 19:28:34 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-03-23 19:28:34 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2016-03-23 19:28:34 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-23 19:28:34 -0400
+
+
+Started POST "/login" for 127.0.0.1 at 2016-03-23 19:28:37 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Uq0PjsXjXenTNQUAGQAz+vpfYiSRyClSflVk5Q0qYmk=", "name"=>"Joe", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."name" = 'Joe' LIMIT 1
+Redirected to http://0.0.0.0:3000/welcome/index
+Completed 302 Found in 95ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2016-03-23 19:28:37 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1
+  Rendered welcome/index.html.erb (3.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17:   </thead>
+    18:   
+    19:   <tbody>
+    20:     <% @welcomes.each do |welcome| %>
+    21:       <tr>
+    22:         <td><%= welcome.latitude %></td>
+    23:         <td><%= welcome.longitude %></td>
+  app/views/welcome/index.html.erb:20:in `_app_views_welcome_index_html_erb___806611549_86859170'
+  app/controllers/application_controller.rb:11:in `set_current_user'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-23 19:29:11 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 270ms (Views: 234.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2016-03-23 19:29:11 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-03-23 19:29:11 -0400
+
+
+Started GET "/assets/universes.css?body=1" for 127.0.0.1 at 2016-03-23 19:29:11 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-23 19:29:11 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-03-23 19:29:11 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-23 19:29:11 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2016-03-23 19:29:11 -0400
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2016-03-23 19:29:11 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-23 19:29:11 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-23 19:29:11 -0400
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2016-03-23 19:29:11 -0400
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-03-23 19:29:11 -0400
+
+
+Started GET "/assets/universes.js?body=1" for 127.0.0.1 at 2016-03-23 19:29:11 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-03-23 19:29:11 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2016-03-23 19:29:11 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-23 19:29:11 -0400
+
+
+Started POST "/login" for 127.0.0.1 at 2016-03-23 19:29:19 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Uq0PjsXjXenTNQUAGQAz+vpfYiSRyClSflVk5Q0qYmk=", "name"=>"Joe", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."name" = 'Joe' LIMIT 1
+Redirected to http://0.0.0.0:3000/welcome/index
+Completed 302 Found in 96ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2016-03-23 19:29:19 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1
+  Rendered welcome/index.html.erb (2.9ms)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2016-03-23 19:29:25 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"   ORDER BY "users"."name" ASC[0m
+  Rendered users/index.html.erb within layouts/application (13.9ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `latitude' for #<User:0x9bc12c8>):
+    24:   <tbody>
+    25:     <% @users.each do |user| %>
+    26:       <tr>
+    27:         <td><%= user.latitude %></td>
+    28:         <td><%= user.longitude %></td>
+    29:         <td><%= user.address %></td>
+    30:         <td><%= user.description %></td>
+  app/views/users/index.html.erb:27:in `block in _app_views_users_index_html_erb__625722409_81811080'
+  app/views/users/index.html.erb:25:in `_app_views_users_index_html_erb__625722409_81811080'
+  app/controllers/application_controller.rb:11:in `set_current_user'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (28.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (40.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-23 19:29:54 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 226ms (Views: 207.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2016-03-23 19:29:55 -0400
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2016-03-23 19:29:55 -0400
+
+
+Started GET "/assets/universes.css?body=1" for 127.0.0.1 at 2016-03-23 19:29:55 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-03-23 19:29:55 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-23 19:29:55 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2016-03-23 19:29:55 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-03-23 19:29:55 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-23 19:29:55 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-23 19:29:55 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-23 19:29:55 -0400
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2016-03-23 19:29:55 -0400
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-03-23 19:29:55 -0400
+
+
+Started GET "/assets/universes.js?body=1" for 127.0.0.1 at 2016-03-23 19:29:55 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-03-23 19:29:55 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2016-03-23 19:29:55 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-23 19:29:55 -0400
+
+
+Started POST "/login" for 127.0.0.1 at 2016-03-23 19:29:59 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Uq0PjsXjXenTNQUAGQAz+vpfYiSRyClSflVk5Q0qYmk=", "name"=>"Joe", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."name" = 'Joe' LIMIT 1
+Redirected to http://0.0.0.0:3000/welcome/index
+Completed 302 Found in 98ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2016-03-23 19:29:59 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1
+  Rendered welcome/index.html.erb (6.7ms)
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index?start=icc&end=harlan+chapel" for 127.0.0.1 at 2016-03-23 19:30:09 -0400
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"icc", "end"=>"harlan chapel"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1
+  Rendered welcome/index.html.erb (3.0ms)
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2016-03-23 19:30:17 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (11.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1
+  Rendered users/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 137ms (Views: 121.4ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2016-03-23 19:30:17 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-03-23 19:30:17 -0400
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2016-03-23 19:30:17 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2016-03-23 19:30:17 -0400
+
+
+Started GET "/assets/universes.css?body=1" for 127.0.0.1 at 2016-03-23 19:30:17 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-23 19:30:17 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-23 19:30:17 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-03-23 19:30:17 -0400
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2016-03-23 19:30:17 -0400
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-03-23 19:30:17 -0400
+
+
+Started GET "/assets/universes.js?body=1" for 127.0.0.1 at 2016-03-23 19:30:17 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-23 19:30:17 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-23 19:30:17 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2016-03-23 19:30:17 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-03-23 19:30:17 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-23 19:30:17 -0400
+
+
+Started GET "/sessions/destroy" for 127.0.0.1 at 2016-03-23 19:30:20 -0400
+Processing by SessionsController#destroy as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/admin/index
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/index" for 127.0.0.1 at 2016-03-23 19:30:20 -0400
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+Redirected to http://0.0.0.0:3000/
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 14ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-23 19:30:20 -0400
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 111ms (Views: 109.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-23 19:40:58 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 185ms (Views: 166.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2016-03-23 19:40:59 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-03-23 19:40:59 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2016-03-23 19:40:59 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-23 19:40:59 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-23 19:40:59 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-03-23 19:40:59 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-23 19:40:59 -0400
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2016-03-23 19:40:59 -0400
+
+
+Started GET "/assets/universes.css?body=1" for 127.0.0.1 at 2016-03-23 19:40:59 -0400
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2016-03-23 19:40:59 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-23 19:40:59 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-23 19:40:59 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2016-03-23 19:40:59 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-03-23 19:40:59 -0400
+
+
+Started GET "/assets/universes.js?body=1" for 127.0.0.1 at 2016-03-23 19:40:59 -0400
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-03-23 19:40:59 -0400
+
+
+Started POST "/login" for 127.0.0.1 at 2016-03-23 19:41:06 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Uq0PjsXjXenTNQUAGQAz+vpfYiSRyClSflVk5Q0qYmk=", "name"=>"Joe", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."name" = 'Joe' LIMIT 1
+Redirected to http://0.0.0.0:3000/welcome/index
+Completed 302 Found in 113ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2016-03-23 19:41:06 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1
+  Rendered welcome/index.html.erb (3.3ms)
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2016-03-23 19:48:34 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1
+  Rendered welcome/index.html.erb (9.5ms)
+Completed 200 OK in 17ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index?start=%3Coption+value%3D&end=%3Coption+value%3D" for 127.0.0.1 at 2016-03-23 19:51:39 -0400
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"<option value=", "end"=>"<option value="}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.5ms)
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  lib/map.rb:89:in `shortest_path'
+  lib/map.rb:42:in `solve'
+  app/controllers/welcome_controller.rb:21:in `index'
+  app/controllers/application_controller.rb:11:in `set_current_user'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-23 19:59:27 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 215ms (Views: 189.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2016-03-23 19:59:28 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2016-03-23 19:59:28 -0400
+
+
+Started GET "/assets/universes.css?body=1" for 127.0.0.1 at 2016-03-23 19:59:28 -0400
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2016-03-23 19:59:28 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2016-03-23 19:59:28 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2016-03-23 19:59:28 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-03-23 19:59:28 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-23 19:59:28 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-23 19:59:28 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-23 19:59:28 -0400
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-03-23 19:59:28 -0400
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2016-03-23 19:59:28 -0400
+
+
+Started GET "/assets/universes.js?body=1" for 127.0.0.1 at 2016-03-23 19:59:28 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2016-03-23 19:59:28 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-23 19:59:28 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2016-03-23 19:59:28 -0400
+
+
+Started POST "/login" for 127.0.0.1 at 2016-03-23 19:59:32 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Uq0PjsXjXenTNQUAGQAz+vpfYiSRyClSflVk5Q0qYmk=", "name"=>"Joe", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."name" = 'Joe' LIMIT 1
+Redirected to http://0.0.0.0:3000/welcome/index
+Completed 302 Found in 105ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2016-03-23 19:59:32 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1
+  Rendered welcome/index.html.erb (8.5ms)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index?start=%3Coption+value%3D&end=%3Coption+value%3D" for 127.0.0.1 at 2016-03-23 19:59:35 -0400
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"<option value=", "end"=>"<option value="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1
+  Rendered welcome/index.html.erb (3.2ms)
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index?start=berlin+chapel&end=%3Coption+value%3D" for 127.0.0.1 at 2016-03-23 19:59:38 -0400
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"berlin chapel", "end"=>"<option value="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1
+  Rendered welcome/index.html.erb (18.2ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index?start=bernstein+marcus&end=castle" for 127.0.0.1 at 2016-03-23 19:59:41 -0400
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"bernstein marcus", "end"=>"castle"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 8 LIMIT 1
+  Rendered welcome/index.html.erb (2.7ms)
+Completed 200 OK in 8ms (Views: 3.7ms | ActiveRecord: 0.2ms)

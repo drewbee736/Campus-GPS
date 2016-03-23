@@ -9,13 +9,14 @@ class WelcomeController < ApplicationController
     @map.load_paths("./lib/paths.txt")
     name_list = @map.get_all_nodes_name
     @notes = {}
-    name_list.each do |name|
+    @notes['Select a building'] = nil
+    name_list.sort.each do |name|
       @notes[name] = name
     end
   end
 
   def index
-    if params[:start] != nil && params[:end] != nil
+    if params[:start] != nil && params[:end] != nil && params[:start] != '<option value=' && params[:end] != '<option value='
       startP = @map.get_node_id(params[:start])
       endP = @map.get_node_id(params[:end])
       @result = @map.solve(startP, endP).html_safe

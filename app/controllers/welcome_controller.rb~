@@ -1,14 +1,16 @@
 require './lib/map.rb'
 
 class WelcomeController < ApplicationController
-
+	before_filter :authorize
+	
   def initialize
     @map = CampusMap.new()
     @map.load_buildings("./lib/buildings.txt")
     @map.load_paths("./lib/paths.txt")
     name_list = @map.get_all_nodes_name
     @notes = {}
-    name_list.each do |name|
+    @notes['Select a building'] = nil
+    name_list.sort.each do |name|
       @notes[name] = name
     end
   end
