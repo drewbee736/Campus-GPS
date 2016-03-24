@@ -11,6 +11,10 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-1.11.1.min
+//= require bootstrap.min
+//= require jquery.backstretch.min
+//= require scripts
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
