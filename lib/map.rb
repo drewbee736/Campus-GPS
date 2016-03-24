@@ -4,39 +4,14 @@ class CampusMap
 
 	def initialize
 		@graph = DirectedGraph.new
-		@name_to_id = {}
-		@id_to_name = {}
 	end
 
-	def load_paths(filename)
-		File.foreach(filename) do |line|
-			_start, _end, _distance = line.split("\t")
-			@graph.add_edge(_start.to_i, _end.to_i, _distance.to_i)
+	def load_map(pathArr)
+		pathArr.each do |_start, _end, _distance|
+			@graph.add_edge(_start, _end, _distance)
 		end
 	end
-
-	def load_buildings(filename)
-		File.foreach(filename) do |line|
-			id, name = line.split(',')
-			@graph.add_node(Node.new(id.to_i))
-			@name_to_id[name.strip] = id.to_i
-			@id_to_name[id.to_i] = name.strip
-		end
-	end
-
-    def get_all_nodes_name
-        return @name_to_id.keys
-    end
-
-    def get_node_name(id)
-    	return @id_to_name[id] if @id_to_name.has_key?(id)
-    	return id
-    end
-
-	def get_node_id(name)
-		return @name_to_id[name]
-	end
-
+=begin
 	def solve(start_id, end_id)
 		ret = ""
 		paths = @graph.shortest_path(start_id, end_id)
@@ -55,6 +30,18 @@ class CampusMap
 		ret += "Total distance: #{total_distance}<br>"
 		return ret
 	end
+=end
+
+	def solve(start_id, end_id)
+		ret = []
+		paths = @graph.shortest_path(start_id, end_id)
+		return false if paths == false
+		paths.each do |p_id, s_id, distance|
+			ret.push(p_id)
+		end
+		ret.push((paths.last)[1])
+		return ret
+	end
 
 end
 
@@ -69,8 +56,8 @@ class DirectedGraph
 	end
 
 	def add_edge(predecessor_id, successor_id, weight)
-		add_node(Node.new(predecessor_id)) if not @nodes.has_key?(predecessor_id)
-		add_node(Node.new(successor_id)) if not @nodes.has_key?(successor_id)
+		add_node(Vertice.new(predecessor_id)) if not @nodes.has_key?(predecessor_id)
+		add_node(Vertice.new(successor_id)) if not @nodes.has_key?(successor_id)
 		@nodes[predecessor_id].add_edge(@nodes[successor_id], weight)
 	end
 
@@ -109,7 +96,7 @@ class DirectedGraph
 
 end
 
-class Node
+class Vertice
 
 	attr_reader :id
 
