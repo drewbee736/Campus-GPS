@@ -20883,3 +20883,167 @@ Processing by WelcomeController#index as HTML
   [1m[35mNode Load (0.1ms)[0m  SELECT  "nodes".* FROM "nodes"  WHERE "nodes"."id" = ? LIMIT 1  [["id", 1018]]
   Rendered welcome/index.html.erb (2.6ms)
 Completed 200 OK in 20ms (Views: 3.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-23 22:31:27 -0400
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 108ms (Views: 106.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-23 22:31:27 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-23 22:31:27 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-23 22:31:27 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-23 22:31:27 -0400
+
+
+Started POST "/login" for 127.0.0.1 at 2016-03-23 22:31:37 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UY79n6uwG8d9JYsP3i6PS7Q2AIL8vSIul7U2raaf5UQ=", "name"=>"shuao", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."name" = 'shuao' LIMIT 1[0m
+Redirected to http://localhost:3000/welcome/index
+Completed 302 Found in 66ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2016-03-23 22:31:37 -0400
+  [1m[35m (0.2ms)[0m  SELECT "buildings"."id", "buildings"."name" FROM "buildings"   ORDER BY "buildings"."name" ASC
+  [1m[36m (1.0ms)[0m  [1mSELECT "paths"."start", "paths"."end", "paths"."distance" FROM "paths"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered welcome/index.html.erb (2.6ms)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/welcome/index?start=1004&end=1002" for 127.0.0.1 at 2016-03-23 22:33:23 -0400
+  [1m[35m (0.2ms)[0m  SELECT "buildings"."id", "buildings"."name" FROM "buildings"   ORDER BY "buildings"."name" ASC
+  [1m[36m (1.2ms)[0m  [1mSELECT "paths"."start", "paths"."end", "paths"."distance" FROM "paths"[0m
+Processing by WelcomeController#index as HTML
+  Parameters: {"start"=>"1004", "end"=>"1002"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mNode Load (0.1ms)[0m  SELECT  "nodes".* FROM "nodes"  WHERE "nodes"."id" = ? LIMIT 1  [["id", 1004]]
+  [1m[36mNode Load (0.1ms)[0m  [1mSELECT  "nodes".* FROM "nodes"  WHERE "nodes"."id" = ? LIMIT 1[0m  [["id", 115]]
+  [1m[35mNode Load (0.1ms)[0m  SELECT  "nodes".* FROM "nodes"  WHERE "nodes"."id" = ? LIMIT 1  [["id", 97]]
+  [1m[36mNode Load (0.1ms)[0m  [1mSELECT  "nodes".* FROM "nodes"  WHERE "nodes"."id" = ? LIMIT 1[0m  [["id", 117]]
+  [1m[35mNode Load (0.1ms)[0m  SELECT  "nodes".* FROM "nodes"  WHERE "nodes"."id" = ? LIMIT 1  [["id", 116]]
+  [1m[36mNode Load (0.1ms)[0m  [1mSELECT  "nodes".* FROM "nodes"  WHERE "nodes"."id" = ? LIMIT 1[0m  [["id", 112]]
+  [1m[35mNode Load (0.2ms)[0m  SELECT  "nodes".* FROM "nodes"  WHERE "nodes"."id" = ? LIMIT 1  [["id", 131]]
+  [1m[36mNode Load (0.1ms)[0m  [1mSELECT  "nodes".* FROM "nodes"  WHERE "nodes"."id" = ? LIMIT 1[0m  [["id", 143]]
+  [1m[35mNode Load (0.1ms)[0m  SELECT  "nodes".* FROM "nodes"  WHERE "nodes"."id" = ? LIMIT 1  [["id", 310]]
+  [1m[36mNode Load (0.1ms)[0m  [1mSELECT  "nodes".* FROM "nodes"  WHERE "nodes"."id" = ? LIMIT 1[0m  [["id", 1002]]
+  Rendered welcome/index.html.erb (3.4ms)
+Completed 200 OK in 12ms (Views: 4.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-24 12:09:08 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 247ms (Views: 213.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-03-24 12:09:09 -0400
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2016-03-24 12:09:09 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2016-03-24 12:09:09 -0400
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2016-03-24 12:09:09 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-24 12:09:09 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-24 12:09:09 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-24 12:09:09 -0400
+
+
+Started POST "/login" for 127.0.0.1 at 2016-03-24 12:09:11 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hIXJiKtoSEQNoB9kiYJaEluZk86EIc7FKSrP5tHLrdY=", "name"=>"shuao", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."name" = 'shuao' LIMIT 1
+Redirected to http://0.0.0.0:3000/welcome/index
+Completed 302 Found in 69ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2016-03-24 12:09:12 -0400
+  [1m[36m (1.9ms)[0m  [1mSELECT "buildings"."id", "buildings"."name" FROM "buildings"   ORDER BY "buildings"."name" ASC[0m
+  [1m[35m (2.6ms)[0m  SELECT "paths"."start", "paths"."end", "paths"."distance" FROM "paths"
+
+NoMethodError (undefined method `>' for [1037, "pearlman"]:Array):
+  app/controllers/welcome_controller.rb:13:in `sort'
+  app/controllers/welcome_controller.rb:13:in `initialize'
+
+
+  Rendered /Users/metaphoenix/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/metaphoenix/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/metaphoenix/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/metaphoenix/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-24 12:10:03 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 197ms (Views: 164.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-24 12:10:03 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-24 12:10:03 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-24 12:10:03 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-24 12:10:04 -0400
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 76ms (Views: 74.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-03-24 12:10:04 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2016-03-24 12:10:04 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-03-24 12:10:04 -0400
+
+
+Started POST "/login" for 127.0.0.1 at 2016-03-24 12:10:08 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hIXJiKtoSEQNoB9kiYJaEluZk86EIc7FKSrP5tHLrdY=", "name"=>"shuao", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."name" = 'shuao' LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/welcome/index
+Completed 302 Found in 69ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2016-03-24 12:10:08 -0400
+  [1m[35m (0.2ms)[0m  SELECT "buildings"."id", "buildings"."name" FROM "buildings"   ORDER BY "buildings"."name" ASC
+  [1m[36m (0.9ms)[0m  [1mSELECT "paths"."start", "paths"."end", "paths"."distance" FROM "paths"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered welcome/index.html.erb (3.4ms)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.1ms)

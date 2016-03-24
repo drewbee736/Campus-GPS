@@ -10,7 +10,7 @@ class WelcomeController < ApplicationController
 		@map.load_map(adjlist)
     @notes = {}
     @notes['Select a building'] = nil
-    name_list.sort.each do |id, name|
+    name_list.sort_by{|id, name| name}.each do |id, name|
       @notes[name] = id
     end
   end
