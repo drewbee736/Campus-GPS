@@ -1,7 +1,62 @@
+<script src="//maps.google.com/maps/api/js?v=3.13&sensor=false&libraries=geometry" type="text/javascript"></script>
+<script src="//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js" type="text/javascript"></script>
+<p id="notice"><%= notice %></p>
+
+
 <h1>Listing users</h1>
 	<% if notice %>
 	<p id="notice"><%= notice %></p>
 	<% end %>
+	
+	
+<table>
+  <thead>
+    <tr>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Address</th>
+      <th>Description</th>
+      <th>Title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.latitude %></td>
+        <td><%= user.longitude %></td>
+        <td><%= user.address %></td>
+        <td><%= user.description %></td>
+        <td><%= user.title %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<div style='width: 800px;'>
+  <div id="map" style='width: 800px; height: 400px;'></div>
+</div>
+
+<script type="text/javascript">
+  handler = Gmaps.build('Google');
+  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+    markers = handler.addMarkers([
+      {
+        "lat": 42.361954,
+        "lng": -71.263957,
+        "picture": {
+          "url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
+          "width":  36,
+          "height": 36
+        },
+        "infowindow": "hello!"
+      }
+    ]);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+  });
+</script>
 
 <table>
   <thead>
@@ -21,3 +76,4 @@
 <br>
 
 <%= link_to 'New User', new_user_path %>
+<%= link_to 'Log Out', sessions_destroy_url %>
