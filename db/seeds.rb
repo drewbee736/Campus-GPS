@@ -6,3 +6,30 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Universe.create(name:"Our Universe", size:100)
+
+File.foreach('db/paths.txt') do |line|
+  _start, _end, _distance = line.split("\t")
+  a = Path.new
+  a.start = _start.to_i
+  a.end = _end.to_i
+  a.distance = _distance.to_i
+  a.save
+end
+
+File.foreach('db/buildings.txt') do |line|
+  id, name = line.split(',')
+  a = Building.new
+  a.id = id.to_i
+  a.name = name.strip
+  a.save
+end
+
+File.foreach('db/node coordinates.txt') do |line|
+  id, coordinates = line.split(' ')
+  a = Node.new
+  a.id = id.to_i
+  x, y = coordinates.split(',')
+  a.latitude = x.to_f
+  a.longitude = y.to_f
+  a.save
+end
