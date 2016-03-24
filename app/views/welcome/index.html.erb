@@ -1,3 +1,4 @@
+<body>
 <h2>Welcome to Campus GPS</h2>
 
 <p>
@@ -12,10 +13,9 @@
 	</select><br>
 	<input type="submit" value="Search">
 </form>
-
-<p>
-	<%=@result%>
 </p>
 
-</p>
+<%=render 'form', :result => @result%>
+
 <%= link_to 'Log Out', sessions_destroy_url %>
+</body>

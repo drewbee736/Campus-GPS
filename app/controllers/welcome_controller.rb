@@ -3,8 +3,9 @@ require './lib/map.rb'
 class WelcomeController < ApplicationController
 	before_filter :authorize
 
-  def initialize
-    @map = CampusMap.new()
+  def index
+		@map = CampusMap.new()
+		@result = [[42.365965, -71.25981]]
     name_list = Building.order(:name).pluck(:id, :name)
 		adjlist = Path.pluck(:start, :end, :distance)
 		@map.load_map(adjlist)
@@ -13,17 +14,13 @@ class WelcomeController < ApplicationController
     name_list.sort_by{|id, name| name}.each do |id, name|
       @notes[name] = id
     end
-  end
-
-  def index
     if params[:start] != nil && params[:end] != nil && params[:start] != '<option value=' && params[:end] != '<option value='
-      paths = @map.solve(params[:start].to_i, params[:end].to_i)
 			@result = []
+      paths = @map.solve(params[:start].to_i, params[:end].to_i)
 			paths.each do |id|
 				node = Node.find(id)
 				@result.push([node.latitude, node.longitude])
 			end
-			print @result
     end
   end
 

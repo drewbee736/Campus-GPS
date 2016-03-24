@@ -1,14 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Demo</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Roboto:400,100,300,500', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+  <%= favicon_link_tag 'favicon.png', rel: 'shortcut icon', type: 'image/png'%>
+  <%= favicon_link_tag 'apple-touch-icon-144-precomposed.png', sizes: '144x144', rel: 'apple-touch-icon-precomposed', type: 'image/png'%>
+  <%= favicon_link_tag 'apple-touch-icon-114-precomposed.png', sizes: '114x114', rel: 'apple-touch-icon-precomposed', type: 'image/png'%>
+  <%= favicon_link_tag 'apple-touch-icon-114-precomposed.png', sizes: '72x72', rel: 'apple-touch-icon-precomposed', type: 'image/png'%>
+  <%= favicon_link_tag 'apple-touch-icon-57-precomposed.png', rel: 'apple-touch-icon-precomposed', type: 'image/png'%>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
 
-<%= yield %>
+<body>
+  <%= yield %>
 
 </body>
 </html>
