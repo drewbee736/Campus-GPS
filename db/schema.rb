@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160302002831) do
+ActiveRecord::Schema.define(version: 20160324003141) do
+
+  create_table "buildings", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "nodes", force: true do |t|
+    t.float    "latitude"
+    t.float    "longitude"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "paths", force: true do |t|
+    t.integer  "start"
+    t.integer  "end"
+    t.integer  "distance"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "universes", force: true do |t|
     t.text     "name"

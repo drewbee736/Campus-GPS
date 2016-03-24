@@ -2,11 +2,11 @@ require './lib/map.rb'
 
 class WelcomeController < ApplicationController
 	before_filter :authorize
-	
+
   def initialize
     @map = CampusMap.new()
-    @map.load_buildings("./lib/buildings.txt")
-    @map.load_paths("./lib/paths.txt")
+    @map.load_buildings("./db/buildings.txt")
+    @map.load_paths("./db/paths.txt")
     name_list = @map.get_all_nodes_name
     @notes = {}
     @notes['Select a building'] = nil
