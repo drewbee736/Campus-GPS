@@ -2,10 +2,10 @@
 
 one:
   id: 1
-  coordinateX: 1.5
-  coordinateY: 1.5
+  latitude: 1.5
+  longitude: 1.5
 
 two:
   id: 1
-  coordinateX: 1.5
-  coordinateY: 1.5
+  latitude: 1.5
+  longitude: 1.5
