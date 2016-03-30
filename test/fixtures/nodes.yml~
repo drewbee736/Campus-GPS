@@ -2,8 +2,10 @@
 
 one:
   id: 10000
-  name: MyString
+  latitude: 1.5
+  longitude: 1.5
 
 two:
-  id: 10001
-  name: MyString
+  id: 10000
+  latitude: 1.5
+  longitude: 1.5
