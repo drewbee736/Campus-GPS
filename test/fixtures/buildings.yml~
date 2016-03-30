@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  id: 10000
+  id: 
   name: MyString
 
 two:
-  id: 10001
+  id: 
   name: MyString
