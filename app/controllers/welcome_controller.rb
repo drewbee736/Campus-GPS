@@ -4,6 +4,8 @@ class WelcomeController < ApplicationController
 	before_filter :authorize
 
   def index
+		#if @user.Home_Node
+
 		@map = CampusMap.new()
 		@result = [[42.365965, -71.25981]]
     name_list = Building.order(:name).pluck(:id, :name)
@@ -23,5 +25,11 @@ class WelcomeController < ApplicationController
 			end
     end
   end
+
+	def select_home
+		building_id = params[:select_home]
+		node = Node.find(building_id)
+		node.latitude, node.longitude
+	end
 
 end

@@ -7,6 +7,7 @@
 	<select name="start">
 		<option value="<%=options_for_select(@notes)%>"></option>
 	</select><br>
+
 	Destination
 	<select name="end">
 		<option value="<%=options_for_select(@notes)%>"></option>
@@ -15,7 +16,8 @@
 </form>
 </p>
 
+<%= link_to 'Log Out', sessions_destroy_url %>
+
 <%=render 'form', :result => @result%>
 
-<%= link_to 'Log Out', sessions_destroy_url %>
 </body>
