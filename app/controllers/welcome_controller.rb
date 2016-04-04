@@ -26,10 +26,10 @@ class WelcomeController < ApplicationController
     end
   end
 
-	def select_home
-		building_id = params[:select_home]
-		node = Node.find(building_id)
-		node.latitude, node.longitude
-	end
+	#def select_home
+		#building_id = params[:select_home]
+		#node = Node.find(building_id)
+		#node.latitude, node.longitude
+	#end
 
 end
