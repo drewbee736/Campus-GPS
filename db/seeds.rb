@@ -7,6 +7,13 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Universe.create(name:"Our Universe", size:100)
 
+User.delete_all
+Path.delete_all
+Building.delete_all
+Node.delete_all
+
+User.create(name:"Drew", email:"dfarbs@brandeis.edu", password: "test")
+
 File.foreach('db/paths.txt') do |line|
   _start, _end, _distance = line.split("\t")
   a = Path.new
