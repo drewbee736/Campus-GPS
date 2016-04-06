@@ -1,0 +1,24 @@
+<body>
+<h2>Welcome to Campus GPS</h2>
+
+<p>
+	<form name="query" action="/welcome/index">
+	Start Location
+	<select name="start">
+		<option value="<%=options_for_select(@notes)%>"></option>
+	</select><br>
+
+	Destination
+	<select name="end">
+		<option value="<%=options_for_select(@notes)%>"></option>
+	</select><br>
+	<input type="submit" value="Search">
+</form>
+</p>
+
+<%= link_to 'User Page', user_path %>
+<%= link_to 'Log Out', sessions_destroy_url %>
+
+<%=render 'form', :result => @result%>
+
+</body>
