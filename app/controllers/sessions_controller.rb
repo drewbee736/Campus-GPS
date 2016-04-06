@@ -15,6 +15,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+  	UserMailer.welcome_email(User.current_user).deliver
     session[:user_id] = nil
     redirect_to admin_index_url, notice:"Logged out"
   end
