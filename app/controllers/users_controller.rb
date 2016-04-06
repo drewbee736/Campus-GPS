@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-	skip_before_filter :authorize, only: [:create, :new]
+	#skip_before_filter :authorize, only: [:create, :new]
+	skip_before_filter :authorize, only: [:create, :new, :show, :edit, :update, :destroy]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
@@ -29,9 +30,9 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-      	
+
       	UserMailer.welcome_email(@user).deliver
-      
+
         format.html { redirect_to root_url, notice: "User #{@user.name} was successfully created. Please sign in to continue." }
         format.json { render :show, status: :created, location: @user }
       else

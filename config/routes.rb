@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
   resources :users
-  
+
   get 'admin' => 'admin#index'
-  
+
   controller :sessions do
   	get 'login' => :new
   	post 'login' => :create
   	delete 'logout' => :destroy
   end
-  
+
   get 'admin/index'
 
   get 'sessions/new'
@@ -19,6 +19,8 @@ Rails.application.routes.draw do
 
   post 'sessions/new' => 'sessions#create'
   get 'welcome/index'
+
+  post 'users/create'
 
   #get 'member/:id' => 'members#show'
 
