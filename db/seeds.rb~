@@ -12,7 +12,7 @@ Path.delete_all
 Building.delete_all
 Node.delete_all
 
-User.create(name:"Drew", email:"drewbee736@aol.com", password: "test")
+User.create(name:"Drew", email:"dfarbs@brandeis.edu", password: "test")
 
 File.foreach('db/paths.txt') do |line|
   _start, _end, _distance = line.split("\t")
