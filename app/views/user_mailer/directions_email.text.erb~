@@ -1,4 +1,4 @@
-Thank you for using Campus GPS, <%= @user.name %>
+Thank you for using CampusGPS, <%= @user.name %>
 ===========================================
 
 Here are your text directions:
