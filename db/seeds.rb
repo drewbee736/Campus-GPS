@@ -40,7 +40,6 @@ File.foreach('db/node coordinates.txt') do |line|
   a.longitude = y.to_f
   a.save
 end
-=end
 
 File.foreach('db/paths_to_string.txt') do |line|
   _start, _end, _description = line.split("\t")
