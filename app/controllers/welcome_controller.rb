@@ -19,6 +19,8 @@ class WelcomeController < ApplicationController
     if params[:start] != nil && params[:end] != nil && params[:start] != '<option value=' && params[:end] != '<option value='
 			@result = []
       paths = @map.solve(params[:start].to_i, params[:end].to_i)
+			str = @map.solve_text(params[:start].to_i, params[:end].to_i)
+			UserMailer.directions_email(User.current_user, str)
 			paths.each do |id|
 				node = Node.find(id)
 				@result.push([node.latitude, node.longitude])

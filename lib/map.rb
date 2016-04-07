@@ -31,6 +31,18 @@ class CampusMap
 		return ret
 	end
 =end
+	def solve_text(start_id, end_id)
+		ret = ""
+		paths = @graph.shortest_path(start_id, end_id)
+		return false if paths == false
+		paths.each do |p_id, s_id, distance|
+			text = (Path.where(start: p_id, end: s_id)[0]).description
+			if text != nil
+				ret = ret + text.to_s + "\n"
+			end
+		end
+		return ret
+	end
 
 	def solve(start_id, end_id)
 		ret = []
