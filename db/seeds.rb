@@ -39,6 +39,43 @@ File.foreach('db/node coordinates.txt') do |line|
   a.save
 end
 
+dining_file = File.read('dining.json')
+dining_hash = JSON.parse(dining_file)
+
+dining_hash.each do
+  |info|
+  latlong = info[1]
+  value = info[0]
+  lat = latlong[0]
+  long = latlong[1]
+  Nearestdining.create(latitude:lat, longitude:long, name:value)
+end
+
+fitness_file = File.read('fitness.json')
+fitness_hash = JSON.parse(fitness_file)
+
+fitness_hash.each do
+  |info|
+  latlong = info[1]
+  value = info[0]
+  lat = latlong[0]
+  long = latlong[1]
+  Nearestfit.create(latitude:lat, longitude:long, name:value)
+end
+
+parking_file = File.read('parking.json')
+parking_hash = JSON.parse(parking_file)
+
+parking_hash.each do
+  |info|
+  latlong = info[1]
+  value = info[0]
+  lat = latlong[0]
+  long = latlong[1]
+  Nearestparking.create(latitude:lat, longitude:long, name:value)
+end
+
+
 File.foreach('db/paths_to_string.txt') do |line|
   _start, _end, _description = line.split("\t")
   print _start
