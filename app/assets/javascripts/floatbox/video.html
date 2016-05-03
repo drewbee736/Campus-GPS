@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html style="background-color:#000;">
+<head>
+<meta charset="utf-8"/>
+<title>Floatbox Video Player 7.1</title>
+<script src="floatbox.js"></script>
+
+<style>
+html, body, #container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border-width: 0;
+	background-color: #000;
+}
+p {
+	background-color: #fffacd;
+	width: 60%;
+	text-align: center;
+	margin: 24px auto;
+	padding: 16px;
+}
+</style>
+
+</head>
+<body>
+<div id="container"></div>
+
+<script>
+fb.ready( function () {
+
+	var $container = fb.$( 'container' ),
+		$player = document.createElement( 'video' ),
+		params = fb.deserialize( location.search.substring( 1 ) ),
+		mp4Source = params.source,  // IE 9+, Safari 3.1+, Firefox 21.0+ (requires OS support), Chrome (recent with OS support, older version h/w acceleration has problems on some video cards)
+		webmSource = mp4Source.replace( /\.mp4\b/i, '.webm' ),  // Chrome 6.0+, Firefox 4.0+, Opera 10.6+ (IE 9+ and OSX Safari 3.1 if system codecs are installed)
+//		 oggSource =  mp4Source.replace( /\.mp4\b/i, '.ogg' ),  // Chrome, Firefox 3.5+, Opera 10.5+ (OSX Safari 3.1 if system codec installed)
+		poster = params.poster == 'null' ? null : params.poster || mp4Source.replace( /\.mp4\b/i, '.jpg' ),
+		autoPlay = params.autoplay != '0',
+		autoEnd = params.autoend != '0',
+		posterSource = null,
+		canPlayMp4 = $player.canPlayType && $player.canPlayType( 'video/mp4' ),
+		canPlayWebm = $player.canPlayType && $player.canPlayType( 'video/webm' ),
+		handlers = [],
+		timer;
+
+	delete params.autoplay;
+	delete params.autoend;
+	delete params.source;
+	delete params.poster;
+	params.bgcolor = params.bgcolor || 'transparent';
+	$container.style.backgroundColor = params.bgcolor;
+
+	buildPlayer();
+
+	function buildPlayer () {
+
+	// HTML5 video
+		if ( canPlayMp4 || canPlayWebm ) {
+
+			fb.removeEvent( handlers );
+			handlers.length = 0;
+			if ( $player.parentNode ) {
+				$player.parentNode.removeChild( $player );
+			}
+
+			fb.attr( $player, {
+				id: 'fbPlayer',
+				width: '100%',
+				height: '100%',
+				preload: 'metadata',
+				controls: '',
+				poster: posterSource,
+				src: canPlayMp4 ? mp4Source : webmSource
+			} );
+
+			handlers.push(
+
+				fb.addEvent( $player, 'loadedmetadata', function () {
+					if ( autoPlay ) {
+						$player.play();
+					}
+					if ( !timer ) {
+						timer = setTimeout( function () {
+							fb.preload( poster, function ( img ) {
+								if ( img.ok && !$player.started ) {
+									posterSource = poster;
+									buildPlayer();
+								}
+							} );
+						}, autoPlay ? 222 : 22 );
+					}
+				} ),
+
+				fb.addEvent( $player, 'playing', function () {
+					clearTimeout( timer );
+					$player.started = true;
+				} ),
+
+				fb.addEvent( $player, 'error', function (e) {
+					if ( canPlayMp4 ) {
+						canPlayMp4 = false;
+					}
+					else {
+						canPlayWebm = false;
+					}
+					clearTimeout( timer );
+					timer = 0;
+					buildPlayer();
+				} ),
+
+				fb.addEvent( document, 'keydown', function( e ) {
+					if ( e.keyCode == 27 ) {  // esc
+						onFinish( fb.getOwnerInstance( $player ) );
+					}
+				}, true ),
+
+				autoEnd && fb.addEvent( $player, 'ended', onFinish )
+			);
+
+			if ( !fb.usingTouch ) {
+				handlers.push(
+
+					fb.addEvent( $player, 'mouseover', function () {
+						fb.attr( $player, 'controls', '' );
+					} ),
+
+					fb.addEvent( $player, 'mouseout', function () {
+						fb.attr( $player, 'controls', null );
+					} ),
+
+					fb.addEvent( $player, 'click', function ( e ) {
+						if ( this.offsetHeight - e.clientY > 40 ) {
+							this[ this.paused ? 'play' : 'pause' ]();
+							fb.stopEvent( e );
+						}
+					} )
+
+				);
+			}
+
+			$container.appendChild( $player );
+		}
+
+	// Flash fallback
+		else {
+
+			showContainer( false );  // hide white/green screen at startup
+			$container.innerHTML =  // alt content if flash doesn't work
+				'<p>Uh-oh. Your browser is unable to play this video.<br />' +
+				'Please right-click <a href="' + mp4Source + '">this link</a> ' +
+				'to download the video for offline viewing with a standalone player.</p>';
+			params.config = '{"playerId":"fbPlayer","clip":{"url":"' + mp4Source + '"}}';
+
+			fb.flashObject( {
+//				source: '//releases.flowplayer.org/swf/flowplayer-3.2.18.swf',
+				source: '//cdn.jsdelivr.net/flowplayer/3.2.15/flowplayer-3.2.15.swf',
+				width: '100%',
+				height: '100%',
+				$: 'container',
+				id: 'fbPlayer',
+				params: params,
+				failure: showContainer
+			} );
+
+			window.flowplayer = {  // minimal flowplayer object for receiving events
+				fireEvent: function ( id, type ) {
+					if ( type == 'onBegin' ) {
+						setTimeout( showContainer, 177 );
+					}
+					if ( autoEnd && type == 'onFinish' ) {
+						onFinish();
+					}
+				}
+			};
+		}
+	}
+// end buildPlayer
+
+	function showContainer ( show ) {
+		$container.style.width = $container.style.height = show === false ? '0' : '100%';
+	}
+
+	function onFinish ( killBox ) {
+		fb.removeEvent( handlers );
+		handlers.length = 0;
+		showContainer( false );
+		$container.innerHTML = '';
+		if ( killBox ) {
+			killBox.end();
+		}
+		else {
+			parent.postMessage( '{"event":"finish"}', '*' );
+		}
+	}
+
+} );
+</script>
+
+</body>
+</html>

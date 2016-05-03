@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<h1 style="font-family:verdana;font-size:330%;text-align:center;">Your Information</h1>
+	<% if notice %>
+	<p id="notice"><%= notice %></p>
+	<% end %>
+<br>
+<br>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+		<table class="table">
+		  <thead>
+		    <tr>
+		      <th>Name</th>
+		      <th>Email</th>
+		      <th colspan="3"></th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		  	<tr>
+		    	<td style="text-align:left;"><%= User.current_user.name %></td>
+		    	<td style="text-align:left;"><%= User.current_user.email %></td>
+		    </tr>
+		  </tbody>
+		</table>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
+</div>
+
+<br>
+
+<!--
+<%= link_to 'Map', welcome_index_path %>
+<%= link_to 'Log Out', sessions_destroy_url %>
+-->
+</body>
+</html>

@@ -1,0 +1,203 @@
+157-169 Prospect Street													42.370467, -71.246380					
+51 Sawyer Road, Suite 520												42.361469, -71.258530			
+567 South Street Apartments												42.361285, -71.261551
+
+60 Turner Street														42.361954, -71.263957
+	
+Abelson-Bass-Yalem Building												42.366195, -71.258814
+
+Abraham Shapiro Academic Complex										42.369659, -71.259485
+
+Bassine Science Building												42.366901, -71.257846
+
+Berlin Chapel															42.368186, -71.260682
+
+Bernstein-Marcus Administration Center									42.365058, -71.259754
+
+Bethlehem Chapel														42.368273, -71.260136	
+
+Brown Social Science Center												42.367266, -71.256977
+
+Carl and Ruth Shapiro Admissions Center									42.364346, -71.260889	
+				
+Carl J. Shapiro Science Center											42.365962, -71.258226
+
+Charles River Apartments: 110 Angleside - Cohen							42.359493, -71.257552
+
+Charles River Apartments: 150 - Coffman									42.359645, -71.257112
+	
+Charles River Apartments: 164 - Lewis									42.359965, -71.256779
+
+Charles River Apartments: 178 - May										42.360343, -71.256605
+
+East Quad - Hassenfeld-Krivoff-Shapiro Brothers Hall					42.367873, -71.254818
+
+East Quad - Rubenstein-Pomerantz Hall									42.367695, -71.254765
+
+East Quad - Swig Hall													42.367683, -71.255047
+
+Edison-Lecks Science Building											42.366314, -71.258209
+	
+Epstein Building														42.362309, -71.261232
+
+Faculty Center															42.365653, -71.261299
+
+Faculty Lodge															42.365947, -71.261133
+
+Farber Library															42.367859, -71.258600
+	
+Feldberg Communications Center											42.366770, -71.258942
+
+Ford Athletic and Recreation Complex									42.365080, -71.254990
+
+Foster Bio-Medical Research Center										42.366068, -71.256650
+
+Foster Mods 1-9 - Casty													42.365879, -71.253705
+
+Foster Mods 10-18 - Casty												42.365868, -71.253727
+
+Foster Mods 19-27 - Tobin												42.365792, -71.253776
+
+Foster Mods 28-36 - Morris												42.365760, -71.253772	
+
+Gerstenzang Science Library												42.366599, -71.258135
+
+Goldfarb Library														42.368357, -71.258060
+	
+Golding Health Center													42.366101, -71.255251
+
+Golding Judaica Center													42.370146, -71.257770
+
+Goldman-Schwartz Fine Art Studios										42.364883, -71.262984
+	
+Goldsmith Building														42.367135, -71.258396
+
+Gosman Sports and Convocation Center									42.364910, -71.254680
+
+Gryzmish Center															42.365594, -71.259292
+
+Harlan Chapel															42.368710, -71.260667
+		
+Hassenfeld Conference Center											42.366407, -71.260640
+
+Heller-Brown Building													42.369200, -71.258792
+
+Irving Presidential Enclave												42.365266, -71.259257
+
+Irving Schneider and Family Building (Heller School)					42.369298, -71.259355
+
+Jack, Joseph and Morton Mandel Center for Studies in Jewish Education	42.369650, -71.259362
+
+Jack, Joseph and Morton Mandel Center for the Humanities				42.369699, -71.258266
+
+Kosow-Wolfson-Rosensweig Building										42.366112, -71.256935
+
+Kutz Hall																42.368920, -71.255978
+
+Landsman Research Facility												42.365962, -71.255378
+
+Lemberg Academic Center													42.364540, -71.264238
+
+Lemberg Children's Center												42.363612, -71.258783
+
+Lemberg Hall															42.367287, -71.256413
+
+Linsey Sports Center													42.365877, -71.254347
+
+Lown Center for Judaica Studies											42.370131, -71.257248
+
+Mailman 																42.365858, -71.255777
+
+Main Entrance Information Booth											42.365042, -71.258670
+
+Mandel Center for the Humanities										42.369836, -71.258277
+
+Massell Quad - DeRoy Hall												42.366979, -71.261044
+
+Massell Quad - Renfield Hall											42.367106, -71.260958
+
+Massell Quad - Shapiro Hall												42.367092, -71.261079
+
+Massell Quad - Usen Hall												42.367102, -71.261103
+
+North Quad - Cable Hall													42.369422, -71.255692
+
+North Quad - Gordon Hall												42.369383, -71.255595
+
+North Quad - Reitman Hall												42.369399, -71.255692
+
+North Quad - Scheffres Hall												42.369295, -71.255619
+
+Olin-Sang American Civilization Center									42.369682, -71.257670
+
+Pearlman Hall															42.367454, -71.257932
+
+Pollack Fine Arts Teaching Center										42.365238, -71.262438
+
+Rabb Graduate Center													42.366536, -71.258635
+
+Rabb School																42.366576, -71.258571
+
+Rapaporte Treasure Hall													42.366232, -71.258539
+
+Ridgewood Quad - Hall B													42.363887, -71.261231
+
+Ridgewood Quad - Hall C													42.363821, -71.260715
+
+Ridgewood Quad - Jehuda Reinharz Hall									42.364012, -71.260495
+
+Rose Art Museum															42.365829, -71.262437
+
+Rose Art Museum Lois Foster Wing										42.365858, -71.262401
+
+Rosenstiel Basic Medical Sciences Research Center						42.365859, -71.257346
+
+Rosenstiel-Kosow Connector												42.366011, -71.257093
+
+Rosenthal Quad - East													42.367076, -71.259879
+
+Rosenthal Quad - North													42.367307, -71.260176
+
+Rosenthal Quad - South													42.366852, -71.260181
+
+Sachar International Center												42.364889, -71.264799
+
+Schwartz Hall															42.367539, -71.257303
+
+Schwartz Hall - Castle													42.366912, -71.255599
+
+Shapiro Athletic Center													42.365399, -71.254965
+
+Shapiro Campus Center													42.365796, -71.260099
+
+Shapiro Science Center													42.365970, -71.258280
+
+Sherman - Hassenfeld Conference Center									42.366386, -71.260565
+
+Sherman Student Center / Dining Hall									42.366499, -71.260635
+
+Shiffman Humanities Center												42.369719, -71.257058
+
+Slosberg Music Center													42.364164, -71.259632
+
+Spingold Theater Center													42.364496, -71.261935
+
+Stoneman Infirmary and Public Safety									42.366274, -71.255470
+
+The Village																42.363287, -71.260280
+
+Usdan Student Center													42.368041, -71.256609
+
+Usen Castle																42.367292, -71.255663
+
+Volen National Center for Complex Systems								42.366970, -71.258800
+
+Wein Faculty Center														42.365765, -71.261080
+
+Ziv Quad - Hall A														42.363422, -71.261654
+
+Ziv Quad - Hall B														42.363006, -71.261552
+
+Ziv Quad - Hall D														42.363335, -71.260973
+
+Ziv Quad - Mazer Hall													42.362895, -71.261118

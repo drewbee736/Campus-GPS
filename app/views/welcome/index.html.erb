@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BCG</title>
+	<script src="/assets/welcome/modernizr.custom.95515.js"></script>
+	<script>
+			yepnope([
+            '/assets/jquery-1.12.0.min.js.erb',
+            {
+                test : Modernizr.input.list,
+                nope : ['https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css',
+                        '/assets/welcome/jquery-ui.min.js',
+                        '/assets/welcome/DatalistPolyfill.js']
+            }
+        ]);
+	</script>
+	<link rel="stylesheet" href="/assets/floatbox.css"/>
+	<script src="/assets/floatbox/floatbox.js"></script>
+</head>
+
+
+<body>
+	<nav class="navbar navbar-default" style="margin-bottom: 0">
+	<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#" style="font-size: 200%">Campus GPS</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<form class="navbar-form navbar-left" role="search" action="/welcome/index" id="input_form">
+				<div class="form-group">
+          <datalist id = "building_list">
+              <%=options_for_select(@notes)%>
+          </datalist>
+					<input name="start" type="text" class="form-control" placeholder="Start Location" list="building_list">
+					<input name="end" type="text" class="form-control" placeholder="Destination" list="building_list">
+				</div>
+        <button type="submit" class="btn" form="input_form">Search</button>
+			</form>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+          <a class="dropdown-toggle" role="button" data-toggle="dropdown"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
+          <ul class="dropdown-menu">
+            <%=content_tag(:li, role:"presentation"){
+                if !(User.current_user.nil?)
+									link_to User.current_user.name, users_path, class: "floatbox", style: "font-style: italic", :data => { :'fb-options' => 'width:50% height:50% contentScroll:true' }
+                else
+                  content_tag(:a, "Guest", style:"font-style: italic")
+                  # link_to("guest", "#")
+                end
+              }
+            %>
+              <li role="presentation" class="divider"></li>
+            <%=content_tag(:li, role:"presentation"){
+                if !(User.current_user.nil?)
+                  link_to "Send Email", welcome_route_url(:text => @strs), class: "floatbox", :data => { :'fb-options' => 'width:50% height:60% contentScroll:true' }
+                else
+                  content_tag(:a, "Log in", 'data-toggle'=>"modal", 'data-target'=>"#myModalHorizontal")
+                end
+              }
+            %>
+            <%=content_tag(:li, role:"presentation"){
+                if !(User.current_user.nil?)
+                  link_to("Change User", "#")
+                else
+                  link_to("Sign Up", users_new_url, 'data-no-turbolink'=> 'true')
+                end
+              }
+            %>
+             <li role="presentation" class="divider"></li>
+            <%=content_tag(:li, role:"presentation"){
+               if !(User.current_user.nil?)
+                 link_to('Log Out', sessions_destroy_url)
+               else
+                 link_to("More Options", "#")
+               end
+             }
+            %>
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+  <div class="modal fade" id="myModalHorizontal" tabindex="-1" role="dialog"
+       aria-labelledby="myModalLabel" aria-hidden="true">
+       <div style="width:70%; margin-right:auto; margin-left:auto; margin-top:10%;">
+         <div class="col-sm-6 col-sm-offset-3 form-box">
+           <div class="form-top">
+             <div class="form-top-left">
+               <h3>Want to use your GPS?</h3>
+                 <p>Enter your username and password to log on:</p>
+             </div>
+             <div class="form-top-right">
+               <i class="fa fa-lock"></i>
+             </div>
+           </div>
+           <div class="form-bottom">
+             <form role="form" action="/sessions/create" class="login-form">
+               <div class="form-group">
+                 <label class="sr-only" for="form-username">Username</label>
+                 <input type="text" name="name" style="height:50px" placeholder="Username" class="form-username form-control" id="form-username">
+               </div>
+               <div class="form-group">
+                 <label class="sr-only" for="form-password">Password</label>
+                 <input type="password" name="password" style="height:50px" placeholder="Password" class="form-password form-control" id="form-password">
+               </div>
+               <button type="submit" class="btn" style="height:50px">Sign In</button>
+             </form>
+             <form action="/users/new">
+               <button type="submit" class="btn" id="signup_button" style="height:50px" data-toggle="modal" data-target="#">Sign Up</button>
+             </form>
+           </div>
+         </div>
+       </div>
+  </div>
+
+<%=render 'form', :result => @result%>
+
+</body>
+</html>

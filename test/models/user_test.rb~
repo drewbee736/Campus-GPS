@@ -1,0 +1,24 @@
+require 'test_helper'
+
+class UserTest < ActiveSupport::TestCase
+  
+	describe User do
+		before do
+			@user = User.new
+			@user.email = "dfarbs@brandeis.edu"
+			@user.password = "Drewbee736"
+		end
+	
+		describe "when a user wants to login" do
+			it "must remeber the info" do
+				@user.get_email.must_equal "dfarbs@brandeis.edu"
+			end
+		end
+	
+		describe "when a user wants to login" do
+			it "must remeber the info" do
+				@user.get_password.must_equal "Drewbee736"
+			end
+		end
+	end
+end
