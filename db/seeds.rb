@@ -27,9 +27,10 @@ nodes_hash.each do
   |node_info|
 
   latlong = node_info[1]
+  value = node_info[0]
   lat = latlong[0]
   long = latlong[1]
-  Node.create(latitude:lat, longitude:long)
+  Node.create(id:value, latitude:lat, longitude:long)
 end
 
 building_file = File.read('buildings.json')
