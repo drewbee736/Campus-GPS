@@ -1,0 +1,31 @@
+Dining
+"Sherman", 42.366574, -71.260501	
+"Usdan",42.368150, -71.257176
+"Hoot Market",42.368271, -71.256979
+"Einstein Bros. Bagels",42.365733, -71.260185
+"Quad Cafe",42.369694, -71.258230
+"Heller-Brown Cafe",42.369188, -71.258832
+"Farber-Library Cafe",42.367851, -71.258439
+"Village Cafe",42.363144, -71.260408
+"Peet's Coffee and Tea",42.366088, -71.257885
+"Faculty Club",42.365978, -71.261122
+"The Stein",42.366398, -71.260733
+
+Fitness Centers
+"Gosman Sports and Convocation Center",42.365179, -71.255604
+"Gordon Field (soccer)",42.362368, -71.258968
+"Marcus Field (baseball)",42.363977, -71.256273
+"Rieger Tennis Courts",42.364545, -71.253718
+"Village Fitness center",42.363232, -71.260269
+
+Parking Lots
+"Theatre Lot",42.363700, -71.262657
+"Athletics Lot",42.364713, -71.256896
+"Hassenfeld Lot",42.366580, -71.261800
+"Admissions Lot",42.364488, -71.260300
+"Tower Lot",42.370347, -71.258644
+"Science Lot",42.366446, -71.257147
+
+
+
+
