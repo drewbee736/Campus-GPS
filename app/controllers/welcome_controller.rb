@@ -48,12 +48,14 @@ class WelcomeController < ApplicationController
     			end
 
         end
-        print @result, "here!"
+
         @result.push(nearest_facility)
-        print @result, "here after!"
+
       else
+
         end_id = (Building.where(name: params[:end]))[0].id.to_i
-  			paths = map.solve(start_id, end_id)
+        print start_id, end_id, "hey?"
+        paths = map.solve(start_id, end_id)
   			@strs = map.solve_text(start_id, end_id)
   			paths.each do |id|
   				node = Node.find(id)

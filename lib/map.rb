@@ -75,6 +75,7 @@ class DirectedGraph
 	end
 
 	def shortest_path(start_id, end_id)
+		print start_id, end_id, "hey!"
 		distance = {}
 		visited = {}
 		predecessor = {}

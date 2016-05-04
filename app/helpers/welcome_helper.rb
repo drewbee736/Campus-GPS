@@ -1,8 +1,7 @@
 module WelcomeHelper
 	def self.nearest_building_id(lag_lng, nearest=nil)
 		if nearest
-			lag_lng= self.nearest_facility(lag_lng, nearest)
-			puts lag_lng, "hey!"
+			lag_lng= self.nearest_facility(lag_lng, nearest)			
 		end
 
 		lag_lng[0] = lag_lng[0].to_f
@@ -20,7 +19,7 @@ module WelcomeHelper
 				end
 			end
 		end
-		
+
 		return minID, lag_lng
 	end
 #this is a very redundant method, but I couldn't figure out how to pass in a database as a parameter,

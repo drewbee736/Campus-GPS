@@ -73,6 +73,10 @@ parking_hash.each do
   Nearestparking.create(id: value, latitude:lat, longitude:long, name:value)
 end
 
+File.foreach('db/entrances.txt') do |line|
+  node_num, lat, long =line.split(",")
+  Entrance.create(node_num: node_num, latitude:lat, longitude:long)
+end
 
 File.foreach('db/paths_to_string.txt') do |line|
   _start, _end, _description = line.split("\t")

@@ -1,64 +1,106 @@
-1001,abelson
-1002,asac
-1003,bassine
-1004,berlin chapel
-1005,bernstein marcus
-1006,bethlehem chapel
-1007,brown
-1008,admissions
-1009,ssc
-1010,hass
-1011,pom
-1012,icc
-1013,library
-1014,feldberg
-1015,gzang
-1016,golding
-1017,goldsmith
-1018,gryzmish
-1019,harlan chapel
-1020,heller
-1021,mandel
-1022,kutz
-1023,ibs
-1024,lemberg
-1025,lown
-1026,mailman
-1027,main entrance
-1028,deroy
-1029,renfield
-1030,shapiro
-1031,usen massell
-1032,cable
-1033,gordon
-1034,reitman
-1035,scheffres
-1036,olin sang
-1037,pearlman
-1038,pollack
-1039,rabb
-1040,ridgewood a
-1041,ridgewood b
-1042,ridgewood c
-1043,rose art museum
-1044,rosenstiel
-1045,rosie quad
-1046,schwartz
-1047,castle
-1048,scc
-1049,sherman
-1050,shiffman
-1051,slosberg
-1052,spingold
-1053,public safety
-1054,village
-1055,usdan
-1056,usen castle
-1057,volen
-1058,ziv 127
-1059,ziv 128
-1060,ziv 129
-1061,ziv 130
+1001,157-169 Prospect St 
+1002,51 Sawyer Road 
+1003,567 South Street Apts 
+1004,60 Turner St 
+1005,Abelson-Bass-Yalem 
+1006,Abraham Shapiro 
+1007,Bassine Science Bld 
+1008,Berlin Chapel 
+1009,Bernstein-Marcus Admin Center 
+1010,Bethlehem Chapel 
+1011,Brown Social Science 
+1012,Shapiro Admissions 
+1013,Shapiro Science Center 
+1014,Charles River Apts: Cohen 
+1015,Charles River Apts: Coffman 
+1016,Charles River Apts: Lewis 
+1017,Charles River Apts: May 
+1018,East Quad Hassenfeld 
+1019,East Quad Rubenstein-Pomerantz 
+1020,East Quad Swig Hall 
+1021,Edison-Lecks Science Bld 
+1022,Epstein Bld 
+1023,Faculty Center 
+1024,Faculty Lodge 
+1025,Farber Library 
+1026,Feldberg Communications 
+1027,Ford Athletic and Recreation 
+1028,Foster Bio-Medical Research 
+1029,Foster Mods 1-9 Casty 
+1030,Foster Mods 10-18 Casty 
+1031,Foster Mods 19-27 Tobin 
+1032,Foster Mods 28-36 Morris 
+1033,Gerstenzang Science Library 
+1034,Goldfarb Library 
+1035,Golding Health Center 
+1036,Golding Judaica Center 
+1037,Goldman-Schwartz Fine Arts 
+1038,Goldsmith Bld 
+1039,Gosman Sports&Convocation 
+1040,Gryzmish Center 
+1041,Harlan Chapel 
+1042,Hassenfeld Conference 
+1043,Heller-Brown Bld 
+1044,Irving Presidential Enclave 
+1045,Heller Schneider Family Bld 
+1046,Mandel Center Jewish Education 
+1047,Mandel Center Humanities 
+1048,Kosow-Wolfson-Rosensweig Bld 
+1049,Kutz Hall 
+1050,Landsman Research Facility 
+1051,Lemberg Academic Center 
+1052,Lemberg Children's Center 
+1053,Lemberg Hall 
+1054,Linsey Sports Center 
+1055,Lown Center Judaica Studies 
+1056,Mailman 
+1057,Main Entrance Info Booth 
+1058,Mandel Center for Humanities 
+1059,Massell Quad - DeRoy Hall 
+1060,Massell Quad - Renfield Hall 
+1061,Massell Quad - Shapiro Hall 
+1062,Massell Quad - Usen Hall 
+1063,North Quad - Cable Hall 
+1064,North Quad - Gordon Hall 
+1065,North Quad - Reitman Hall 
+1066,North Quad - Scheffres Hall 
+1067,Olin-Sang American Civ Center 
+1068,Pearlman Hall 
+1069,Pollack Fine Arts 
+1070,Rabb Graduate Center 
+1071,Rabb School 
+1072,Rapaporte Treasure Hall 
+1073,Ridgewood Quad Hall B 
+1074,Ridgewood Quad Hall C 
+1075,Ridgewood Quad Jehuda Reinharz 
+1076,Rose Art Museum 
+1077,Rose Art Museum Foster Wing 
+1078,Rosenstiel Research Center 
+1079,Rosenstiel-Kosow Connector 
+1080,Rosenthal Quad - East 
+1081,Rosenthal Quad - North 
+1082,Rosenthal Quad - South 
+1083,Sachar International Center 
+1084,Schwartz Hall 
+1085,Schwartz Hall - Castle 
+1086,Shapiro Athletic Center 
+1087,Shapiro Campus Center 
+1088,Shapiro Science Center 
+1089,Hassenfeld Conference Center 
+1090,Sherman Student & Dining Center 
+1091,Shiffman Humanities 
+1092,Slosberg Music Center 
+1093,Spingold Theater Center 
+1094,Stoneman Infirmary & Public Safety 
+1095,The Village 
+1096,Usdan Student Center 
+1097,Usen Castle 
+1098,Volen Complex Systems 
+1099,Wein Faculty Center 
+1100,Ziv Quad - Hall A 
+1101,Ziv Quad - Hall B 
+1102,Ziv Quad - Hall D 
+1103,Ziv Quad - Mazer Hall 
 1111, nearest parking
 2222, nearest dining
 3333, nearest athletics 
