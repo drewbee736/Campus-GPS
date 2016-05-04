@@ -59,3 +59,6 @@
 1059,ziv 128
 1060,ziv 129
 1061,ziv 130
+1111, nearest parking
+2222, nearest dining
+3333, nearest athletics 

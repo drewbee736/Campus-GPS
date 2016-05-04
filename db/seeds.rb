@@ -5,12 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Universe.create(name:"Our Universe", size:100)
 
-User.delete_all
-Path.delete_all
-Building.delete_all
-Node.delete_all
 
 File.foreach('db/paths.txt') do |line|
   _start, _end, _distance = line.split("\t")
@@ -46,9 +41,10 @@ dining_hash.each do
   |info|
   latlong = info[1]
   value = info[0]
-  lat = latlong[0]
-  long = latlong[1]
-  Nearestdining.create(latitude:lat, longitude:long, name:value)
+  name = latlong[0]
+  lat = latlong[1]
+  long = latlong[2]
+  Nearestdining.create(id: value,latitude:lat, longitude:long, name:value)
 end
 
 fitness_file = File.read('fitness.json')
@@ -58,9 +54,10 @@ fitness_hash.each do
   |info|
   latlong = info[1]
   value = info[0]
-  lat = latlong[0]
-  long = latlong[1]
-  Nearestfit.create(latitude:lat, longitude:long, name:value)
+  name = latlong[0]
+  lat = latlong[1]
+  long = latlong[2]
+  Nearestfit.create(id: value, latitude:lat, longitude:long, name:value)
 end
 
 parking_file = File.read('parking.json')
@@ -70,9 +67,10 @@ parking_hash.each do
   |info|
   latlong = info[1]
   value = info[0]
-  lat = latlong[0]
-  long = latlong[1]
-  Nearestparking.create(latitude:lat, longitude:long, name:value)
+  name = latlong[0]
+  lat = latlong[1]
+  long = latlong[2]
+  Nearestparking.create(id: value, latitude:lat, longitude:long, name:value)
 end
 
 
