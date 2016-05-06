@@ -1,3 +1,11 @@
+Please note: this repo is the working repo, not the production repo. It does not contain the portfolio page, only a majority of the work we've done before switching over to javascript for google maps generation. The codeship tests do not pass in this repo!!!! Codeship and portfolio page are located in the repo called Real_campus_gps here: 
+
+https://github.com/xihe92/Real_Campus_GPS
+
+Please check this link for the repo that contains the code which powers the site http://www.campusgps.com, as well as the code that passes codeship tests and deploys to heroku via https://agile-retreat-99450.herokuapp.com/
+
+
+
 == README
 
 This README would normally document whatever steps are necessary to get the
